@@ -1,0 +1,34 @@
+#! [Example BoardDefaults.cmake]
+IF(NOT QUL_COLOR_DEPTH)
+    SET(QUL_COLOR_DEPTH 32)
+ENDIF()
+if(NOT QUL_PLATFORM_DEFAULT_SCREEN_WIDTH)
+    set(QUL_PLATFORM_DEFAULT_SCREEN_WIDTH 1920)
+endif()
+if(NOT QUL_PLATFORM_DEFAULT_SCREEN_HEIGHT)
+    set(QUL_PLATFORM_DEFAULT_SCREEN_HEIGHT 720)
+endif()
+set (QUL_PLATFORM_ARCHITECTURE "cortex-r5-hf-vfpv3-d16")
+
+set(QUL_OS "FreeRTOS" CACHE INTERNAL "Operating system")
+
+#if(NOT DEFINED FREERTOS_DIR)
+#    set(FREERTOS_DIR "${SEMIDRIVE_X9_FREERTOS_DIR}")
+#    message(STATUS "FREERTOS_DIR cache entry not set. Using default: ${FREERTOS_DIR}")
+#endif()
+
+set(QUL_PLATFORM_REQUIRED_IMAGE_ALIGNMENT "8")
+set(QUL_PLATFORM_REQUIRED_PIXEL_WIDTH_ALIGNMENT "16")
+set(QUL_PRIVATE_DEFAULT_RESOURCE_SPLIT_IMAGE_OPTIMIZATION OFF)
+set(QUL_PLATFORM_DEFAULT_RESOURCE_ALPHA_OPTIONS "Never")
+set(QUL_PRIVATE_DEFAULT_RESOURCE_PADDING "PadToForcedDimensions")
+
+set(QUL_PLATFORM_EXCLUDED_DEMOS "automotive;thermo;watch" CACHE STRING "List of excluded demos/examples from build")
+set(QUL_PLATFORM_EXCLUDED_EXAMPLES "multiscreen" CACHE STRING "List of examples excluded from build")
+
+set(QUL_PLATFORM_ARCHITECTURE "${QUL_PLATFORM}")
+set(QUL_PLATFORM_ARCHITECTURE_FILE "${CMAKE_CURRENT_LIST_DIR}/../../../../architecture/cortex-r5-hf-vfpv3-d16/${COMPILER_FOLDER_NAME}/architecture.cmake")
+
+
+#! [Example BoardDefaults.cmake]
+

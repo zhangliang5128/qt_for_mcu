@@ -1,0 +1,21 @@
+{
+  "qulVersion": "@CMAKE_PROJECT_VERSION@",
+  "platform": "X9-FREERTOS",
+  "platformVendor": "SEMIDRIVE",
+  "colorDepths": [
+    16
+  ],
+  "toolchain": {
+    "id": "linaro-gcc",
+    "versions": [
+      "7.3.1"
+    ],
+    "cmakeToolchainFile": "lib/cmake/Qul/toolchain/armgcc.cmake"
+  },
+  "boardSdk": {
+    "envVar": "VENDOR_SPECIFIC_SDK_PATH_VARIABLE",
+    "versions": [
+      "1.16.0"
+    ]
+  }
+}
